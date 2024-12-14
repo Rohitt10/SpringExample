@@ -9,7 +9,14 @@
         <property name="message" value="I am Bean property">
 
         </property>
+    </bean>
 
+    <bean id="specification" class="org.example.cars.Specification">
+        <property name="model" value="Top"/>
+        <property name="type" value="Luxury"/>
+    </bean>
+    <bean id="myCar" class="org.example.cars.MyCar">
+        <constructor-arg ref="specification"/>
     </bean>
 
 </beans>
