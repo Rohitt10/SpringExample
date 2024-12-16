@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="myCat" class="org.example.ioc.coupling.Cat">
+        
+    </bean>
+
+    <bean id="myDog" class="org.example.ioc.coupling.Dog">
+
+    </bean>
+
+    <bean id="myPetCat" class="org.example.ioc.coupling.Pet">
+        <constructor-arg ref="myCat"/>
+    </bean>
+    <bean id="myPetDog" class="org.example.ioc.coupling.Pet">
+        <constructor-arg ref="myDog"/>
+    </bean>
+</beans>
